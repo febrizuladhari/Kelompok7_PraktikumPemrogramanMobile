@@ -1,6 +1,6 @@
 package com.duldul.prakmobilekel7.rest
 
-import android.telecom.Call
+import com.duldul.prakmobilekel7.Model.Note
 import com.duldul.prakmobilekel7.Model.ResponseResult
 import retrofit2.Call
 import retrofit2.http.GET
