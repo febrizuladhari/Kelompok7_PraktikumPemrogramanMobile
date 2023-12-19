@@ -123,13 +123,19 @@
         android:text="@string/update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"/>
+
     <Button
         android:id="@+id/update_btnDelete"
         android:text="@string/delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"/>
+
 
     </LinearLayout>
 </RelativeLayout>
