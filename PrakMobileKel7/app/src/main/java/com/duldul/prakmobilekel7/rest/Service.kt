@@ -26,5 +26,5 @@ interface Service {
     ): Call<ResponseResult>
 
     @GET("delete.php")
-    fun deletetUser(@Query("id") id: String): Call<ResponseResult>
+    fun deleteUser(@Query("id") id: String): Call<ResponseResult>
 }
