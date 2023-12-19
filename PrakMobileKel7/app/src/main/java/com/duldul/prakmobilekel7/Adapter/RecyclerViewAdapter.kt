@@ -26,7 +26,17 @@ class RecyclerViewAdapter(var context: Context, var list: List<Note>) :
             txtTitle.text = data.getTitle()
             txtNote.text = data.getNote()
             txtDate.text = data.getDate()
-            layout.setBackgroundColor(Color.parseColor(data.getColor()))
+
+            // Check if the color string is not empty before parsing
+            if (data.getColor().isNotEmpty()) {
+                try {
+                    layout.setBackgroundColor(Color.parseColor(data.getColor()))
+                } catch (e: IllegalArgumentException) {
+                    // Handle the case where the color cannot be parsed
+                    e.printStackTrace()
+                }
+            }
+
             layout.setOnClickListener {
                 val intent = Intent(context, UpdateActivity::class.java)
                 intent.putExtra("itemId", data.getId())
