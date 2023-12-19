@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.duldul.prakmobilekel7.Model.Note
+import com.duldul.prakmobilekel7.R
+import com.duldul.prakmobilekel7.UpdateActivity
 
 class RecyclerViewAdapter(var context: Context, var list: List<Note>) :
     RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
@@ -45,3 +48,18 @@ class RecyclerViewAdapter(var context: Context, var list: List<Note>) :
             }
         }
     }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        val inflater = LayoutInflater.from(context)
+        val itemView = inflater.inflate(R.layout.list_item, parent, false)
+        return MyViewHolder(itemView)
+    }
+
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        holder.bindData(list[position])
+    }
+
+    override fun getItemCount(): Int {
+        return list.size
+    }
+}
