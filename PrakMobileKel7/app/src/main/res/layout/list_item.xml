@@ -14,6 +14,7 @@
         android:textStyle="bold"
         android:id="@+id/list_item_txtTitle"
         android:text="title"
+        android:textSize="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -21,16 +22,16 @@
         android:inputType="textMultiLine"
         android:minLines="5"
         android:maxLines="5"
-
         android:id="@+id/list_item_txtNote"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:layout_below="@id/list_item_txtTitle"
         android:layout_above="@id/list_item_txtDate"
+        android:textSize="25dp"
         android:text="note" />
 
     <TextView
-        android:textSize="11dp"
+        android:textSize="15dp"
         android:textColor="#333333"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
