@@ -3,6 +3,7 @@ package com.duldul.prakmobilekel7
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
+
 class InsertActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
