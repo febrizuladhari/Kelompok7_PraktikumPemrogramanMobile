@@ -1,11 +1,17 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
 }
 
 android {
     namespace = "com.duldul.prakmobilekel7"
     compileSdk = 34
+
+//    viewBinding {
+//        enabled = true
+//    }
+
 
     defaultConfig {
         applicationId = "com.duldul.prakmobilekel7"
@@ -51,6 +57,7 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-
+    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    annotationProcessor ("androidx.lifecycle:lifecycle-compiler:2.2.0")
 
 }
