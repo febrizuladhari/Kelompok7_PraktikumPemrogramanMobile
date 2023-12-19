@@ -22,13 +22,7 @@ class InsertActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInsertBinding.inflate(layoutInflater)
         setContentView(binding.root)
-<<<<<<< Updated upstream
-        progressDialog = ProgressDialog(this)
-=======
 
-        binding.progressBarInsert.visibility = View.GONE // Set initial visibility to GONE
-
->>>>>>> Stashed changes
         binding.insertBtnInsert.setOnClickListener {
             insertUser(
                 binding.insertTxtTitle.text.toString(),

@@ -26,16 +26,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-<<<<<<< Updated upstream
-        progressDialog = ProgressDialog(this)
-=======
 
         progressBar = binding.progressBar // Assuming you have a ProgressBar in your layout
 
->>>>>>> Stashed changes
         binding.btnInsert.setOnClickListener {
             startActivity(Intent(baseContext, InsertActivity::class.java))
         }
+
         fetchInformation()
     }
 
@@ -57,6 +54,7 @@ class MainActivity : AppCompatActivity() {
                     binding.recyclerView.adapter = RecyclerViewAdapter(this@MainActivity, it)
                 }
             }
+
             override fun onFailure(call: Call<List<Note>>, t: Throwable) {
                 // Hide the ProgressBar on failure
                 progressBar.visibility = View.GONE

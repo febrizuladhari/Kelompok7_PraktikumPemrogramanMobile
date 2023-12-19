@@ -7,31 +7,16 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-<<<<<<< Updated upstream
-
-import com.duldul.prakmobilekel7.databinding.ActivityUpdateBinding
-=======
->>>>>>> Stashed changes
+import com.duldul.prakmobilekel7.rest.Client
 import com.duldul.prakmobilekel7.Model.Note
 import com.duldul.prakmobilekel7.Model.ResponseResult
-<<<<<<< Updated upstream
-
-=======
 import com.duldul.prakmobilekel7.databinding.ActivityUpdateBinding
-import com.duldul.prakmobilekel7.rest.Client
->>>>>>> Stashed changes
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class UpdateActivity : AppCompatActivity() {
 
-<<<<<<< Updated upstream
-    lateinit var progressDialog: ProgressDialog
-    private lateinit var strId: String
-    private lateinit var strColor: String
-=======
->>>>>>> Stashed changes
     private lateinit var binding: ActivityUpdateBinding
     private lateinit var strId: String
     private lateinit var strColor: String

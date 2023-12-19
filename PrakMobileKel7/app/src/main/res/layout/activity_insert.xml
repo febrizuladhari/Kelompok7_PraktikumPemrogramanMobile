@@ -20,8 +20,6 @@
         android:layout_margin="20dp"
     tools:context=".InsertActivity">
 
-
-
     <EditText
         android:id="@+id/insert_txtTitle"
         android:layout_width="match_parent"
