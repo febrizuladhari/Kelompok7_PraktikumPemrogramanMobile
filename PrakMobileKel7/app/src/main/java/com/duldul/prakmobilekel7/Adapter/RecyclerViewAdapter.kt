@@ -1,5 +1,8 @@
 package com.duldul.prakmobilekel7.Adapter
 
+import com.duldul.prakmobilekel7.Model.Note
+import com.duldul.prakmobilekel7.UpdateActivity
+
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -9,9 +12,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.duldul.prakmobilekel7.Model.Note
 import com.duldul.prakmobilekel7.R
-import com.duldul.prakmobilekel7.UpdateActivity
 
 class RecyclerViewAdapter(var context: Context, var list: List<Note>) :
     RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {

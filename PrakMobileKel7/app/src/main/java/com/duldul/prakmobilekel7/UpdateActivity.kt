@@ -1,5 +1,10 @@
 package com.duldul.prakmobilekel7
 
+import com.duldul.prakmobilekel7.Model.Note
+import com.duldul.prakmobilekel7.Model.ResponseResult
+import com.duldul.prakmobilekel7.databinding.ActivityUpdateBinding
+import com.duldul.prakmobilekel7.rest.Client
+
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -7,10 +12,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.duldul.prakmobilekel7.rest.Client
-import com.duldul.prakmobilekel7.Model.Note
-import com.duldul.prakmobilekel7.Model.ResponseResult
-import com.duldul.prakmobilekel7.databinding.ActivityUpdateBinding
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
