@@ -1,14 +1,15 @@
 package com.duldul.prakmobilekel7
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.duldul.prakmobilekel7.Adapter.RecyclerViewAdapter
 import com.duldul.prakmobilekel7.Model.Note
 import com.duldul.prakmobilekel7.databinding.ActivityMainBinding
 import com.duldul.prakmobilekel7.rest.Client
@@ -16,18 +17,22 @@ import com.duldul.prakmobilekel7.rest.Service
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import com.duldul.prakmobilekel7.Adapter.RecyclerViewAdapter
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var progressBar: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+<<<<<<< Updated upstream
         progressDialog = ProgressDialog(this)
+=======
+
+        progressBar = binding.progressBar // Assuming you have a ProgressBar in your layout
+
+>>>>>>> Stashed changes
         binding.btnInsert.setOnClickListener {
             startActivity(Intent(baseContext, InsertActivity::class.java))
         }
@@ -37,9 +42,15 @@ class MainActivity : AppCompatActivity() {
     private fun fetchInformation() {
         val apiInterface: Service = Client().getApiClient()!!
         val call: Call<List<Note>> = apiInterface.getNote()
+
+        // Show the ProgressBar
+        progressBar.visibility = View.VISIBLE
+
         call.enqueue(object : Callback<List<Note>> {
             override fun onResponse(call: Call<List<Note>>, response: Response<List<Note>>) {
-                progressDialog.dismiss()
+                // Hide the ProgressBar on a successful response
+                progressBar.visibility = View.GONE
+
                 binding.recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
                 val noteList = response.body()
                 noteList?.let {
@@ -47,7 +58,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             override fun onFailure(call: Call<List<Note>>, t: Throwable) {
-                progressDialog.dismiss()
+                // Hide the ProgressBar on failure
+                progressBar.visibility = View.GONE
+
                 Log.e("zzzzzzzzzz", t.toString())
                 Toast.makeText(baseContext, t.toString(), Toast.LENGTH_LONG).show()
             }
@@ -61,8 +74,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.menu_refresh) {
-            progressDialog.setMessage("Fetching Data ... \n Please wait ...")
-            progressDialog.show()
+            // Show the ProgressBar
+            progressBar.visibility = View.VISIBLE
+
             fetchInformation()
         }
         return super.onOptionsItemSelected(item)
@@ -70,8 +84,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        progressDialog.setMessage("Fetching Data ... \n Please wait ...")
-        progressDialog.show()
+        // Show the ProgressBar
+        progressBar.visibility = View.VISIBLE
+
         fetchInformation()
     }
 }
