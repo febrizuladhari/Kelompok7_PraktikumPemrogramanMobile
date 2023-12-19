@@ -5,6 +5,3 @@ plugins {
     id("org.jetbrains.kotlin.android") version "1.9.10" apply false
 }
 
-//task clean(type: Delete) {
-//    delete rootProject.buildDir
-//}

@@ -13,14 +13,14 @@ import com.duldul.prakmobilekel7.Model.Note
 import com.duldul.prakmobilekel7.R
 import com.duldul.prakmobilekel7.UpdateActivity
 
-class RecyclerViewAdapter (var context: Context,var list :List<Note>): RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
-
+class RecyclerViewAdapter(var context: Context, var list: List<Note>) :
+    RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val txtTitle: TextView = itemView.findViewById(R.id.list_item_txtTitle)
         private val txtNote: TextView = itemView.findViewById(R.id.list_item_txtNote)
         private val txtDate: TextView = itemView.findViewById(R.id.list_item_txtDate)
-        private val layout: RelativeLayout = itemView.findViewById(R.id.list_item_layout);
+        private val layout: RelativeLayout = itemView.findViewById(R.id.list_item_layout)
 
         fun bindData(data: Note) {
             txtTitle.text = data.getTitle()
@@ -38,9 +38,11 @@ class RecyclerViewAdapter (var context: Context,var list :List<Note>): RecyclerV
             }
         }
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val inflater = LayoutInflater.from(context).inflate(R.layout.list_item,parent,false)
-        return MyViewHolder(inflater)
+        val inflater = LayoutInflater.from(context)
+        val itemView = inflater.inflate(R.layout.list_item, parent, false)
+        return MyViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {

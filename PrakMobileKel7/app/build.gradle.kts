@@ -2,15 +2,17 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+//    id("kotlin-android-extensions")
+//    kotlin("android.extensions")
 }
 
 android {
     namespace = "com.duldul.prakmobilekel7"
     compileSdk = 34
 
-//    viewBinding {
-//        enabled = true
-//    }
+    buildFeatures {
+        viewBinding = true
+    }
 
 
     defaultConfig {
