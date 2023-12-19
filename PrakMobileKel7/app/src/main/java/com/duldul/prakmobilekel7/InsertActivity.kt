@@ -25,7 +25,6 @@ class InsertActivity : AppCompatActivity() {
         binding = ActivityInsertBinding.inflate(layoutInflater)
         setContentView(binding.root)
         progressDialog = ProgressDialog(this)
-
         binding.insertBtnInsert.setOnClickListener {
             insertUser(
                 binding.insertTxtTitle.text.toString(),
@@ -48,7 +47,6 @@ class InsertActivity : AppCompatActivity() {
                 progressDialog.dismiss()
                 finish()
             }
-
             override fun onFailure(call: Call<ResponseResult?>, t: Throwable) {
                 progressDialog.dismiss()
                 Toast.makeText(baseContext, t.message, Toast.LENGTH_SHORT).show()

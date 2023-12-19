@@ -28,11 +28,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         progressDialog = ProgressDialog(this)
-
         binding.btnInsert.setOnClickListener {
             startActivity(Intent(baseContext, InsertActivity::class.java))
         }
-
         fetchInformation()
     }
 
@@ -48,7 +46,6 @@ class MainActivity : AppCompatActivity() {
                     binding.recyclerView.adapter = RecyclerViewAdapter(this@MainActivity, it)
                 }
             }
-
             override fun onFailure(call: Call<List<Note>>, t: Throwable) {
                 progressDialog.dismiss()
                 Log.e("zzzzzzzzzz", t.toString())

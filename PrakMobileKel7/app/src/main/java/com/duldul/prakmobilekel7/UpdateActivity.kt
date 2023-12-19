@@ -8,19 +8,21 @@ import android.view.View
 import android.widget.Toast
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
+
 import com.duldul.prakmobilekel7.databinding.ActivityUpdateBinding
 import com.duldul.prakmobilekel7.Model.Note
 import com.duldul.prakmobilekel7.rest.Client
 import com.duldul.prakmobilekel7.Model.ResponseResult
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class UpdateActivity : AppCompatActivity() {
+
     lateinit var progressDialog: ProgressDialog
     private lateinit var strId: String
     private lateinit var strColor: String
-
     private lateinit var binding: ActivityUpdateBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -92,7 +94,6 @@ class UpdateActivity : AppCompatActivity() {
             }
         })
     }
-
 
     fun getColor(view: View) {
         val viewColor = view.background as ColorDrawable
