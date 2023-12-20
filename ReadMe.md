@@ -1,9 +1,10 @@
-Tubes praktikum mobile CRUD dengan Retrofit restapi 
+# Tubes praktikum mobile CRUD dengan Retrofit restapi 
 Aplikasi dapat diinstal langsung pada app-debug.apk
 
-video penjelasan youtube : https://youtu.be/TO8waP5PMY8
+video penjelasan youtube : 
+[![](https://img.youtube.com/vi/TO8waP5PMY8/hqdefault.jpg?)](https://youtu.be/TO8waP5PMY8 "Click here to watch")
 
-Kelompok 7
+# Kelompok 7
 Anggota : 
 1. AL ANHAR SUFI 211402045
 2. FAIRUZ ARIFIN 211402048
