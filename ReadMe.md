@@ -1,6 +1,6 @@
 # Tubes praktikum mobile CRUD dengan Retrofit restapi 
 Aplikasi dapat diinstal langsung pada app-debug.apk
-
+[![Download App](https://img.shields.io/badge/Download-APK-green)](https://github.com/febrizuladhari/Kelompok7_PraktikumPemrogramanMobile/blob/main/app-debug.apk)
 # video penjelasan youtube :
 
 [![](https://img.youtube.com/vi/TO8waP5PMY8/hqdefault.jpg?)](https://youtu.be/TO8waP5PMY8 "Click here to watch")
